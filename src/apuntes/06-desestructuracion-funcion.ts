@@ -3,7 +3,7 @@
     Documentación Oficial: https://www.typescriptlang.org/docs/handbook/basic-types.html
 */
 
-interface Producto {
+export interface Producto {
     descripcion: string,
     precio: number
 }
@@ -18,7 +18,7 @@ const tableta: Producto = {
     precio: 750
 }
 
-function calculaISV(productos: Producto[]): [number, number] {
+export function calculaISV(productos: Producto[]): [number, number] {
     let total = 0;
 
    productos.forEach(({precio}, i, arr) => {
@@ -32,5 +32,5 @@ const productos = [telefono, tableta];
 
 const [total, isv] = calculaISV(productos);
 
-console.log('Total: ', total);
-console.log('ISV: ', isv);
+// console.log('Total: ', total);
+// console.log('ISV: ', isv);
